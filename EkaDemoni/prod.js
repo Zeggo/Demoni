@@ -200,6 +200,11 @@ function buildSceneAtTime(t){
                               o:[new Material(cpohja)],
                               c:[horn(6)] //max 6 looks good
                              },
+                             // pit
+                             {f:[translate_wi(0,1,0),scaleXYZ_wi(5,1,5)],
+                              o:[new Material(cpohja)],
+                              c:[horn(1)] //max 6 looks good
+                             },
 /* 
                               {f:[translate_wi(0,-3,0),scaleXYZ_wi(2,2,2)],
                                o:[new Material(cpohja),objBall],

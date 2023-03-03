@@ -5,10 +5,10 @@
 ## Change these to match your own production:
 
 # A short name of the production, used in generated file names (don't use spaces!)
-PROD_NAME=Demoni
+PROD_NAME=EkaDemoni
 
 # A "full" name of the production, used in zip package name (don't use spaces!)
-PROD_NAME_FULL=Demoni-MyDemo
+PROD_NAME_FULL=EkaDemoni
 
 # Your handle/nickname, also included in the zip package name (don't use spaces!)
 PROD_AUTHOR=Zeggo
