@@ -78,7 +78,15 @@ function initAssets(){
                                new funCircle(0,32));
 
 }
-
+function horn(amnt){ 
+    var being = {
+        f: [],
+        o: [],
+        c: []
+    }
+    // 1st is size 1
+    // pienenee ja siirtyy ylös
+}
 
 function snowman(t){
     var stuff = {
@@ -153,10 +161,10 @@ function buildSceneAtTime(t){
              2,1, 0,0];
 
         var ctausta=
-            [.1,.1,.2,1,
-             .3,.3,.8,1,
-              .1, .1, .1,2,
-             2,1,0.4,0];
+            [0,0,0,1,
+             0,0,0,1,
+             0,0,0,1,
+             0,0,0,1];
 
         var tausta = {
             f:[], //[rotZ_wi(t*.16)],
@@ -168,7 +176,7 @@ function buildSceneAtTime(t){
                           o:[],
                           c:[
                               {f:[translate_wi(0,-3,0),scaleXYZ_wi(2,2,2)],
-                               o:[new Material(cpohja),objTile],
+                               o:[new Material(cpohja),objBall],
                                c:[]},
 /*
                               {f:[translate_wi(0,-3,0),scaleXYZ_wi(30,.1,30)],
@@ -177,11 +185,12 @@ function buildSceneAtTime(t){
                               {f:stufftrans,
                                o:[],
                                c:[stuff]},
+                               */
                               {f:[scaleXYZ_wi(2,1,3)],
                                o:[],
                                c:[tausta]
                               },
-*/
+
                               {f:[translate_wi(0,3,0), rotY_wi(t*.16), translate_wi(0,0,20-10*Math.sin(t*.01)), rotX_wi(.2)],
                                o:[],
                                c:[],
