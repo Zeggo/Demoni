@@ -88,7 +88,7 @@ function horn(amt){
     // 1st is size 1
     // pienenee ja siirtyy ylös
     for (var i=0;i<amt;i++){
-                being.c.push({f: [translate_wi(0,i,0),scaleXYZ_wi(1/(i+1),1/(i+1),1/(i+1))],
+                being.c.push({f: [translate_wi(0,Math.sqrt(i),0),scaleXYZ_wi(1/(i+1),1/(i+1),1/(i+1))],
                   o: [objBall],
                   c: []
                   });
@@ -160,7 +160,7 @@ function buildSceneAtTime(t){
     var stufftrans=[translate_wi(0,-3.3,0)];
 
 
-        var stuff = snowman(2*t);
+        //var stuff = snowman(2*t);
 
         var cpohja=
             [.3,.2,.1,1,
