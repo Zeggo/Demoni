@@ -167,7 +167,16 @@ function buildSceneAtTime(t){
              .9,.6,.4,1,
              0, 0, 0,1,
              2,1, 0,0];
-
+        var red=
+            [.4,0,0,1,
+             .4,.1,0,1,
+             .4, 0, 0,1,
+             3,0, 0,0];
+        var red2=
+            [.2,0,0,1,
+             .2,0,0,1,
+             .2,0,0,1,
+             4,0,0,0];
         var ctausta=
             [0,0,0,1,
              0,0,0,1,
@@ -185,25 +194,24 @@ function buildSceneAtTime(t){
                           c:[
                             //use horn with amounts to create all shapes, then manipulate their color, shape, placement...
                              {f:[translate_wi(0,0,0),scaleXYZ_wi(1,1,1)],
-                              o:[new Material(cpohja)],
-                              c:[horn(1)]
+                              o:[new Material(red)],
+                              c:[horn(1)] //head
                              },
                              {f:[translate_wi(0,-2.8,0),scaleXYZ_wi(2,2,2)],
-                              o:[new Material(cpohja)],
-                              c:[horn(1)]
+                              o:[new Material(red)],
+                              c:[horn(1)] //body
                              },
                              {f:[translate_wi(0.5,0.5,0),scaleXYZ_wi(0.5,0.5,0.5)],
-                              o:[new Material(cpohja)],
-                              c:[horn(6)] //max 6 looks good
+                              o:[new Material(red2)],
+                              c:[horn(6)] //rhorn, max 6 looks good
                              },
-                             {f:[translate_wi(-0.5,0.5,0),scaleXYZ_wi(-0.5,0.5,0.5)],
-                              o:[new Material(cpohja)],
-                              c:[horn(6)] //max 6 looks good
+                             {f:[translate_wi(-0.5,0.5,0),rotY_wi(0.5),scaleXYZ_wi(0.5,0.5,0.5)],
+                              o:[new Material(red2)],
+                              c:[horn(6)] //lhorn, max 6 looks good
                              },
-                             // pit
-                             {f:[translate_wi(0,1,0),scaleXYZ_wi(5,1,5)],
+                             {f:[translate_wi(0,-3,0),scaleXYZ_wi(5,0.1,5)],
                               o:[new Material(cpohja)],
-                              c:[horn(1)] //max 6 looks good
+                              c:[horn(1)] //pit
                              },
 /* 
                               {f:[translate_wi(0,-3,0),scaleXYZ_wi(2,2,2)],
@@ -221,7 +229,7 @@ function buildSceneAtTime(t){
                                o:[],
                                c:[tausta]
                               },
-                              {f:[translate_wi(0,5,0), rotY_wi(t*.16), translate_wi(0,0,20-10*Math.sin(t*.01)), rotX_wi(.2)],
+                              {f:[translate_wi(0,3,0), rotY_wi(t*.16), translate_wi(0,0,20-10*Math.sin(t*.01)), rotX_wi(.2)],
                                 o:[],
                                 c:[],
                                 r:[new Camera()]
