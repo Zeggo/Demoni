@@ -188,6 +188,10 @@ function buildSceneAtTime(t){
                               o:[new Material(cpohja)],
                               c:[horn(1)]
                              },
+                             {f:[translate_wi(0,-2.8,0),scaleXYZ_wi(2,2,2)],
+                              o:[new Material(cpohja)],
+                              c:[horn(1)]
+                             },
                              {f:[translate_wi(0.5,0.5,0),scaleXYZ_wi(0.5,0.5,0.5)],
                               o:[new Material(cpohja)],
                               c:[horn(6)] //max 6 looks good
