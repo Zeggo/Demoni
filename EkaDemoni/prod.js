@@ -88,8 +88,7 @@ function horn(amt){
     // 1st is size 1
     // pienenee ja siirtyy ylös
     for (var i=0;i<amt;i++){
-    
-                being.c.push({f: [translate_wi(0,i,0),scaleXYZ_wi(i*0.5+1,i*0.5+1,i*0.5+1)],
+                being.c.push({f: [translate_wi(0,i,0),scaleXYZ_wi(1/(i+1),1/(i+1),1/(i+1))],
                   o: [objBall],
                   c: []
                   });
@@ -184,9 +183,10 @@ function buildSceneAtTime(t){
         sceneroot.c.push({f:[],
                           o:[],
                           c:[
+                            //use horn with amounts to create all shapes, then manipulate their color, shape, placement...
                             {f:[translate_wi(0,0,0),scaleXYZ_wi(1,1,1)],
                                 o:[new Material(cpohja)],
-                                c:[horn(3)]
+                                c:[horn(5)]
                             },
 /* 
                               {f:[translate_wi(0,-3,0),scaleXYZ_wi(2,2,2)],
@@ -204,12 +204,16 @@ function buildSceneAtTime(t){
                                o:[],
                                c:[tausta]
                               },
-
-                              {f:[translate_wi(0,3,0), rotY_wi(t*.16), translate_wi(0,0,20-10*Math.sin(t*.01)), rotX_wi(.2)],
+                              {f:[translate_wi(0,5,0), rotY_wi(t*.16), translate_wi(0,0,20-10*Math.sin(t*.01)), rotX_wi(.2)],
+                                o:[],
+                                c:[],
+                                r:[new Camera()]
+                               }
+                              /*{f:[translate_wi(0,3,0), rotY_wi(t*.16), translate_wi(0,0,20-10*Math.sin(t*.01)), rotX_wi(.2)],
                                o:[],
                                c:[],
                                r:[new Camera()]
-                              }
+                              }*/
                           ]
                          }
                         );
