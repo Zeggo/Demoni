@@ -95,7 +95,7 @@ function horn(amt){
                 }
     return being;
 }
-
+/*
 function snowman(t){
     var stuff = {
         f: [],
@@ -141,7 +141,7 @@ function snowman(t){
                  });
     return stuff;
 }
-
+*/
 /**
  * Your own creative input goes here - this function will be called on every screen update.
  *
