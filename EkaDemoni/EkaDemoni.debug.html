@@ -2048,7 +2048,18 @@ function buildSceneAtTime(t){
             c:[]
         };
         var demonBeat = 16;
-
+        
+        sceneroot.c.push({f:[translate_wi(0,7,0), rotY_wi(t*.16), translate_wi(0,0,30-10*Math.sin(t*.01)), rotX_wi(.2)],
+                        o:[],
+                        c:[],
+                        r:[new Camera()]
+                        },
+                        {f:[scaleXYZ_wi(2,1,3)],
+                            o:[],
+                            c:[tausta]
+                           })
+        if (t > 79) {return sceneroot;
+                        }
         sceneroot.c.push({f:[],
                           o:[],
                           c:[
@@ -2061,28 +2072,12 @@ function buildSceneAtTime(t){
                              {f:[translate_wi(0,-0.2,0),scaleXYZ_wi(100,0.1,100)],
                                 o:[new Material(ctausta)],
                                 c:[horn(1)] //ground
-                               },
+                               }
 /* 
                               {f:[translate_wi(0,-3,0),scaleXYZ_wi(2,2,2)],
                                o:[new Material(cpohja),objBall],
                                c:[]},
-
-                              {f:[translate_wi(0,-3,0),scaleXYZ_wi(30,.1,30)],
-                               o:[new Material(cpohja),objTile],
-                               c:[]},
-                              {f:stufftrans,
-                               o:[],
-                               c:[stuff]},
                                */
-                              {f:[scaleXYZ_wi(2,1,3)],
-                               o:[],
-                               c:[tausta]
-                              },
-                              {f:[translate_wi(0,7,0), rotY_wi(t*.16), translate_wi(0,0,30-10*Math.sin(t*.01)), rotX_wi(.2)],
-                                o:[],
-                                c:[],
-                                r:[new Camera()]
-                               }
                               /*{f:[translate_wi(0,3,0), rotY_wi(t*.16), translate_wi(0,0,20-10*Math.sin(t*.01)), rotX_wi(.2)],
                                o:[],
                                c:[],
@@ -2092,30 +2087,30 @@ function buildSceneAtTime(t){
                          }
                         );
         if (t > demonBeat) {
-                     sceneroot.c.push({f:[],
-                            o:[],
-                            c:[                             
-                                //head:
-                            {f:[translate_wi(0,-3,0),scaleXYZ_wi(1,1,1),translate_wi(0,Math.sqrt(t-demonBeat),0)],
-                            o:[new Material(red)],
-                            c:[horn(1),
-                            {f:[translate_wi(0,-2.8,0),scaleXYZ_wi(2,2,2)],
-                                o:[new Material(red)],
-                                c:[horn(1)] //body
-                                },
-                            {f:[translate_wi(0.5,0.5,0),scaleXYZ_wi(0.5,0.5,0.5)],
-                                o:[new Material(red2)],
-                                c:[horn(6)] //rhorn, max 6 looks good
-                                },
-                            {f:[translate_wi(-0.5,0.5,0),rotY_wi(3.14),scaleXYZ_wi(0.5,0.5,0.5)],
-                                o:[new Material(red2)],
-                                c:[horn(6)] //lhorn, max 6 looks good
-                                }] 
-                            }
-                            ]
-                         }
-                        );
+            sceneroot.c.push({f:[],
+                    o:[],
+                    c:[                             
+                        //head:
+                    {f:[translate_wi(0,-3,0),scaleXYZ_wi(1,1,1),translate_wi(0,Math.sqrt(t-demonBeat),0)],
+                    o:[new Material(red)],
+                    c:[horn(1),
+                    {f:[translate_wi(0,-2.8,0),scaleXYZ_wi(2,2,2)],
+                        o:[new Material(red)],
+                        c:[horn(1)] //body
+                        },
+                    {f:[translate_wi(0.5,0.5,0),scaleXYZ_wi(0.5,0.5,0.5)],
+                        o:[new Material(red2)],
+                        c:[horn(6)] //rhorn, max 6 looks good
+                        },
+                    {f:[translate_wi(-0.5,0.5,0),rotY_wi(3.14),scaleXYZ_wi(0.5,0.5,0.5)],
+                        o:[new Material(red2)],
+                        c:[horn(6)] //lhorn, max 6 looks good
+                        }] 
                     }
+                ]
+                }
+            );
+        };
 
     return sceneroot;
 }
