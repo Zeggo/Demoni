@@ -1,7 +1,7 @@
 # Demoni by Zeggo
 *Pikkiriikkinen demo compo entry, 3rd place*
 
-My first demo and 4K intro.
+My first demo and 4k intro.
 
 Party prod made in Let's Make a Demo 1.3 workshop in approx. 13 hours.
 
